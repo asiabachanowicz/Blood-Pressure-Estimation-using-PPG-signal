@@ -24,6 +24,7 @@ print(len(data))
 data = data.dropna(inplace=False)
 
 # Clean the data
+# numbers are considered to drop input they are not accurate
 indexNames = data[data['cp'] < 570].index
 data.drop(indexNames, inplace=True)
 indexNames = data[data['cp'] > 1100].index
